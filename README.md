@@ -55,15 +55,15 @@ The move code for this template is located in the `move` directory. To publish
 it, you can enter the `move` directory, and publish it with the Sui CLI:
 
 ```bash
-cd move
-sui client publish --gas-budget 100000000 counter
+cd move/sword-move
+sui client publish --gas-budget 100000000 
 ```
 
 In the output there will be an object with a `"packageId"` property. You'll want
-to save that package ID to the `src/constants.ts` file as `PACKAGE_ID`:
+to save that package ID to the `.env` file as `VITE_SWORD_PACKAGE_ID`:
 
-```ts
-export const TESTNET_COUNTER_PACKAGE_ID = "<YOUR_PACKAGE_ID>";
+```bash
+VITE_SWORD_PACKAGE_ID = 0x7a3f73fb25ba00e12d11cc4561abdf84eeaa5c64be1fe7978ee615b0503e1878
 ```
 
 Now that we have published the move code, and update the package ID, we can
